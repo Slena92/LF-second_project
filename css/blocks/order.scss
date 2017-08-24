@@ -1,0 +1,218 @@
+.order {
+    background: url('../image/order-bg.png') no-repeat;
+    background-size: 100% 100%;
+    padding-top: rem(50px);
+    .title {
+        font: rem(72px) "Gagalin";
+        color: $yellow;
+        text-align: center;
+    }
+    @include landscape {
+        min-height: 750px;
+    }
+}
+
+.form {
+    height: 100%;
+    margin-top: rem(68px);
+    form {
+        height: 100%;
+    }
+    @include tablets {
+        margin: rem(48px) auto;
+    }
+    @include phones {
+        margin: rem(28px) auto;
+    }
+}
+
+.form__input {
+    box-sizing: border-box;
+    padding-left: rem(10px);
+    padding-right: rem(10px);
+    border-radius: rem(5px);
+    border: rem(2px) solid transparent;
+    height: rem(35px);
+    margin-top: rem(5px);
+    width: 100%;
+}
+
+.form__label-font {
+    color: #fff;
+    font: rem(14px) "Ubuntu";
+    line-height: rem(24px);
+}
+
+.form__input:focus {
+    border: rem(2px) solid $yellow;
+    outline: none;
+}
+
+.form-left {
+    float: left;
+    width: calc(100% / 2 - 10px);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    box-sizing: border-box;
+    @include tablets {
+        float: none;
+        width: 100%;
+    }
+}
+
+.form__name {
+    width: 50%;
+    padding-right: rem(10px);
+}
+
+.form__tel {
+    width: 50%;
+    padding-left: rem(10px);
+}
+
+.form__street {
+    flex-grow: 1;
+    margin-top: rem(11px);
+}
+
+.form__adress-block {
+    width: 100%;
+    display: flex;
+    margin-top: rem(11px);
+}
+
+.form__adress {
+    flex-grow: 1;
+    margin-left: rem(20px);
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.form-right {
+    float: right;
+    width: calc(100% / 2 - 10px);
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    @include tablets {
+        float: none;
+        width: 100%;
+        margin-top: rem(10px);
+    }
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.form__comment {
+    width: 100%;
+    .form__input-comment {
+        width: 100%;
+        height: rem(110px);
+        box-sizing: border-box;
+        padding-top: rem(5px);
+    }
+}
+
+.form__payment {
+    width: 33%;
+    color: #fff;
+    font: rem(14px) "Ubuntu";
+    line-height: rem(24px);
+    margin-right: rem(15px);
+    margin-top: rem(6px);
+    @include phones {
+        margin-top: rem(22px);
+    }
+}
+
+.form__payment-check {
+    float: left;
+    width: rem(7px);
+    height: rem(7px);
+    border: rem(4px) solid #fff;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.form__text {
+    line-height: rem(14px);
+    margin-left: rem(25px);
+}
+
+.form__payment-input {
+    display: none;
+    &:checked+.form__payment-check {
+        background-color: red;
+    }
+}
+
+.form__no-call {
+    width: 33%;
+    color: #fff;
+    font: rem(14px) "Ubuntu";
+    line-height: rem(14px);
+    margin-top: rem(30px);
+    @include phones {
+        margin-top: rem(22px);
+    }
+}
+
+.form__no-call-check {
+    float: left;
+    width: rem(15px);
+    height: rem(15px);
+    background-color: #fff;
+}
+
+.form__no-call-input {
+    display: none;
+    &:checked+.form__no-call-check {
+        background: #fff url("../image/icons/checkbox.png") center no-repeat;
+        background-size: 80% 80%;
+    }
+}
+
+.form__submit-block {
+    width: 100%;
+    margin-top: rem(22px);
+    @include phones {
+        text-align: center;
+        margin-top: rem(24px);
+    }
+}
+
+.form__submit {
+    width: rem(97px);
+    height: rem(35px);
+    background-color: #e45028;
+    border-radius: rem(5px);
+    color: #fff;
+    font: rem(13px) 'Ubuntu';
+    line-height: rem(35px);
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    &:hover {
+        background-color: #c1401e;
+    }
+}
+
+.form__reset {
+    width: rem(97px);
+    height: rem(35px);
+    background-color: transparent;
+    color: #fff;
+    font: rem(13px) 'Ubuntu';
+    line-height: rem(35px);
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}

@@ -1,0 +1,115 @@
+.team {
+    background: url('../image/SBS_1255-X2.png') center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.team__content {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    background-color: #313436;
+    opacity: .9;
+    padding-left: rem(80px);
+    @include tablets {
+        width: 100%;
+    }
+}
+
+.team .title {
+    margin-top: rem(90px);
+    font: rem(72px) 'Gagalin';
+    line-height: rem(72px);
+    color: $yellow;
+    @include tablets {
+        text-align: center;
+    }
+}
+
+.acco {
+    margin-top: rem(90px);
+}
+
+.acco__item {
+    margin-bottom: rem(35px);
+}
+
+.acco__item-active .acco__title {
+    color: $yellow;
+}
+
+.acco__title {
+    height: rem(28px);
+    display: flex;
+    align-items: center;
+    font: rem(14px) 'Gagalin';
+    line-height: rem(28px);
+    color: #fff;
+    @include tablets {
+        justify-content: center;
+    }
+}
+
+.acco__triangle {
+    height: 7px;
+    width: 9px;
+    background: url('../image/icons/triangle.svg') no-repeat;
+    background-size: 100%;
+    margin-right: rem(20px);
+    transition: .5s;
+}
+
+.acco__item-active .acco__triangle {
+    transform: rotate(180deg);
+    transition: .5s;
+}
+
+.acco__content {
+    display: none;
+    overflow: hidden;
+    margin-top: rem(15px);
+}
+
+.acco__pic {
+    height: rem(100px);
+    width: rem(100px);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: rem(20px);
+    float: left;
+    @include tablets {
+        float: none;
+        margin: auto;
+    }
+}
+
+.acco__img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.acco h3 {
+    font: bold rem(14px) 'Ubuntu';
+    color: #fff;
+    margin-left: rem(140px);
+    @include tablets {
+        margin: 24px 0 0 0;
+        text-align: center;
+    }
+}
+
+.acco__text {
+    font: rem(14px) 'Ubuntu';
+    line-height: rem(24px);
+    color: #fff;
+    margin-left: rem(140px);
+    margin-top: rem(20px);
+    @include tablets {
+        margin-left: 0;
+        text-align: center;
+    }
+    @include phones {
+        padding: 0 rem(50px);
+    }
+}

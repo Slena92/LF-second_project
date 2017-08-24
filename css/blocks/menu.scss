@@ -1,0 +1,102 @@
+.menu {
+    background: url('../image/menu-bg.png') center no-repeat;
+    background-size: cover;
+    position: relative;
+    .title {
+        top: rem(110px);
+        left: rem(90px);
+        position: absolute;
+        font: rem(72px) 'Gagalin';
+        line-height: rem(64px);
+        color: #fff;
+        @include phones {
+            font-size: rem(48px);
+            top: rem(70px);
+            left: rem(60px);
+        }
+    }
+}
+
+.acco-vertical {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    @include tablets {
+        width: 100%;
+    }
+}
+
+.acco-vertical__item {
+    height: 100%;
+    display: flex;
+    &:nth-child(1) .acco-vertical__item-container::after {
+        background: url('../image/meat-menu.png') center no-repeat;
+        background-size: cover;
+    }
+    &:nth-child(3) .acco-vertical__item-container::after {
+        background: url('../image/vegan-menu.png') center no-repeat;
+        background-size: cover;
+    }
+    &:nth-child(5) .acco-vertical__item-container::after {
+        background: url('../image/diet-menu.png') center no-repeat;
+        background-size: cover;
+    }
+    &:hover {
+        .acco-vertical__item-container::after {
+            filter: brightness(100%);
+        }
+    }
+}
+
+.acco-vertical__item-container {
+    width: rem(80px);
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        filter: brightness(40%);
+    }
+}
+
+.acco-vertical__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font: rem(40px) 'Gagalin';
+    color: #fff;
+    text-align: center;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    white-space: nowrap;
+    z-index: 100;
+}
+
+.acco-vertical__content {
+    display: block;
+    box-sizing: border-box;
+    flex: 0;
+    transition: flex .5s;
+    overflow: hidden;
+    background-color: #2e3133;
+    opacity: .9;
+    font: rem(14px) 'Ubuntu';
+    line-height: rem(24px);
+    color: #fff;
+}
+
+.acco-vertical__text {
+    width: rem(350px);
+    margin-top: rem(50px);
+    margin-left: rem(50px);
+    p {
+        width: 100%;
+    }
+    @include phones {
+        width: rem(180px);
+        margin-left: rem(30px);
+    }
+}
