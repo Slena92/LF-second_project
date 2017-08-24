@@ -1,0 +1,132 @@
+.reviews__list {
+    height: 100%;
+    @for $i from 1 through 8 {
+        li[class^="reviews__item reviews__item-bg#{$i}"] {
+            background: url('../image/photo/#{$i}.png') center no-repeat;
+            background-size: cover;
+        }
+    }
+}
+
+.reviews__item {
+    float: left;
+    width: 25%;
+    height: 50%;
+    &:hover .reviews__hover {
+        opacity: 1;
+        transform: scale(1);
+        transition: .5s;
+    }
+    filter: grayscale(100%);
+    @include tablets {
+        width: 50%;
+        height: 25%;
+    }
+}
+
+.reviews__hover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    padding-top: rem(50px);
+    padding-left: rem(20px);
+    box-sizing: border-box;
+    opacity: 0;
+    transform: scale(.7);
+    transition: .5s;
+    @include tablets {
+        padding-left: 0;
+        padding-top: rem(20px);
+    }
+}
+
+.reviews__title {
+    font: rem(14px) 'Gagalin';
+    line-height: rem(14px);
+    letter-spacing: rem(1.5px);
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+    @include tablets {
+        text-align: center;
+        margin-top: rem(10px);
+    }
+    @include phones {
+        font-size: rem(24px);
+        line-height: rem(30px);
+        margin-top: 10%;
+        padding: 0 rem(20px);
+    }
+}
+
+.reviews__text {
+    font: rem(14px) 'Ubuntu';
+    line-height: rem(24px);
+    color: #fff;
+    margin-top: rem(30px);
+    width: 90%;
+    max-height: 45%;
+    overflow: hidden;
+    box-sizing: border-box;
+    @include tablets {
+        text-align: center;
+        width: 100%;
+        padding: 0 rem(25px);
+        margin-top: rem(10px);
+    }
+    @include phones {
+        display: none;
+    }
+}
+
+.reviews__button {
+    display: block;
+    width: rem(110px);
+    height: rem(35px);
+    border-radius: rem(3px);
+    border: 0;
+    background-color: $black;
+    color: #fff;
+    text-decoration: none;
+    font: rem(13px) 'Ubuntu';
+    line-height: rem(35px);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: rem(20px);
+    @include tablets {
+        margin: rem(20px) auto;
+    }
+    @include phones {
+        width: rem(150px);
+        height: rem(45px);
+        font: rem(17px) 'Ubuntu';
+        line-height: rem(45px);
+    }
+}
+
+.modal {
+    width: rem(400px);
+    height: rem(300px);
+    border-radius: 5px;
+}
+
+.modal__title {
+    font: rem(14px) 'Gagalin';
+    line-height: rem(14px);
+    letter-spacing: rem(1.5px);
+    text-transform: uppercase;
+    color: $black;
+}
+
+.modal__text {
+    font: rem(14px) 'Ubuntu';
+    line-height: rem(24px);
+    color: $black;
+    margin-top: 10px;
+}
+
+.fancybox-close-small::after {
+    color: red;
+    font-size: 27px;
+    line-height: 27px;
+}

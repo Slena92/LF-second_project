@@ -1,0 +1,84 @@
+.features {
+    background: url('../image/tomato-3.png') center no-repeat;
+    background-size: cover;
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.features .title {
+    font: rem(72px) 'Gagalin';
+    line-height: rem(72px);
+    color: $black;
+    text-align: center;
+    margin-bottom: rem(120px);
+    margin-top: 0;
+}
+
+.features-content {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    width: 100%;
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.features-content__item {
+    width: rem(295px);
+    text-align: center;
+    color: $black;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 0 rem(5px);
+    @include phones {
+        width: 100%;
+        flex: 1;
+        margin-top: rem(20px);
+        height: rem(150px);
+        flex-direction: row;
+    }
+}
+
+.features-content__pic {
+    height: rem(90px);
+    @include phones {
+        flex: 1;
+    }
+}
+
+.features-content__image {
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.features__desc {
+    @include phones {
+        flex: 2;
+    }
+}
+
+.features-content__title {
+    margin-top: rem(30px);
+    margin-bottom: rem(15px);
+    font: rem(23px) 'Lifehack';
+    line-height: rem(28px);
+    @include phones {
+        margin-top: 0;
+        text-align: left;
+    }
+}
+
+.features__text {
+    font: rem(14px) 'Ubuntu';
+    line-height: rem(24px);
+    @include phones {
+        text-align: left;
+    }
+}
