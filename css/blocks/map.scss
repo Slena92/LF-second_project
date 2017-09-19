@@ -1,0 +1,91 @@
+.map {
+    position: relative;
+    flex-grow: 1;
+}
+
+.map__container {
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: rem(60px);
+    background-color: #121212;
+    @include phones {
+        height: rem(100px);
+    }
+}
+
+.footer__left {
+    width: 50%;
+    float: left;
+    margin-top: rem(5px);
+    @include phones {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.footer__adress {
+    font: rem(14px) 'Ubuntu';
+    line-height: rem(24px);
+    color: #fff;
+}
+
+.footer__tel {
+    font: bold rem(14px) 'Ubuntu';
+    line-height: rem(24px);
+    color: #e45028;
+}
+
+.footer__pic {
+    margin-right: rem(5px);
+}
+
+.footer__right {
+    width: 50%;
+    height: 100%;
+    float: right;
+    @include phones {
+        float: none;
+        width: 100%;
+    }
+}
+
+.social {
+    height: 100%;
+    float: right;
+    display: flex;
+    align-items: center;
+    @include phones {
+        float: none;
+        justify-content: center;
+        height: rem(30px);
+    }
+}
+
+.social__items {
+    width: rem(20px);
+    height: rem(20px);
+    margin-left: rem(20px);
+    display: flex;
+    align-items: center;
+}
+
+.social__link {
+    width: 100%;
+    height: 100%;
+    &:hover .social__pic {
+        filter: brightness(100%);
+    }
+}
+
+.social__pic {
+    filter: brightness(40%);
+    max-width: 100%;
+    max-height: 100%;
+}

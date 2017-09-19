@@ -1,0 +1,72 @@
+html,body,ul,p,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.main {
+  height: 100%;
+  transition: transform 1s;
+  will-change: transform;
+}
+
+ul {
+  list-style: none;
+}
+
+label {
+  display: block;
+  box-sizing: border-box;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.section {
+    min-height: 650px;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    box-sizing: border-box;
+    @include phones {
+      min-height: 0;
+    }
+}
+
+.container {
+  width: 95%;
+  max-width: 940px;
+  margin: auto; 
+  height: 100%;
+  position: relative;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+html {
+  @include tablets {
+    font-size: rem(15px);
+  }
+  @include phones {
+    font-size: rem(11px);
+  }
+}
